@@ -49,7 +49,7 @@ public class BasePage {
         return webDriver.getCurrentUrl();
     }
 
-    public void takeScreenshot(String name){
+    public static void takeScreenshot(String name){
         TakesScreenshot takesScreenshot = (TakesScreenshot) webDriver;
         File file = takesScreenshot.getScreenshotAs(OutputType.FILE);
         try {
