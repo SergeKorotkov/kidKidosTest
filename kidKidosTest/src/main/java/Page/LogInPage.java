@@ -1,9 +1,5 @@
 package Page;
 
-import Consts.Consts;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import static Consts.Consts.*;
 
 public class LogInPage extends BasePage {
@@ -20,6 +16,10 @@ public class LogInPage extends BasePage {
 
     public void clickButtonSignIn() {
         clickElementByXpath(SIGN_IN_BUTTON);
+    }
+    public CreateAccountPage clickButtonCreateAccount() {
+        clickElementByXpath(CREATE_ACCOUNT_BUTTON);
+        return new CreateAccountPage();
     }
 
     public void sendTextToMail(String text) {
