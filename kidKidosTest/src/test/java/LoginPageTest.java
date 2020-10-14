@@ -1,3 +1,4 @@
+import Page.CreateAccountPage;
 import Page.LogInPage;
 import Utils.UseCaseBase;
 import org.apache.logging.log4j.LogManager;
@@ -9,7 +10,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 
 public class LoginPageTest extends UseCaseBase {
     public static final Logger logger = LogManager.getLogger(MainPageTest.class);
@@ -52,5 +53,11 @@ public class LoginPageTest extends UseCaseBase {
         logInPage.clickButtonSignIn();
         boolean success=logInPage.errorMessage();
         assertTrue(success);
+    }
+    @Test
+    public void clickCreateAccountButtonTest(){
+      CreateAccountPage createAccountPage=logInPage.clickButtonCreateAccount();
+      boolean isLoaded=createAccountPage.isPageTitleVisible();
+      assertTrue(isLoaded);
     }
 }
