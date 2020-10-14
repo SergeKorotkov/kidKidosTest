@@ -26,7 +26,9 @@ public class LoginPageTest extends UseCaseBase {
     }
     @Test
     public void LoginPageVisibleTest() {
+        logger.info("Login page load test");
         boolean success=logInPage.isPageTitleVisible();
+        LogInPage.takeScreenshot("LoginPageTest");
         assertTrue(success);
     }
     @ParameterizedTest

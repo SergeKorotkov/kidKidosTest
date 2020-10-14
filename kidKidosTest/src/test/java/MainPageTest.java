@@ -29,7 +29,7 @@ public class MainPageTest extends UseCaseBase {
     public void mainPageLoadTest() {
         logger.info("Main page load test");
         Boolean success = mainPage.isLogoVisible();
-        mainPage.takeScreenshot("MainPageTest");
+        BasePage.takeScreenshot("MainPageTest");
         assertTrue(success);
     }
 
