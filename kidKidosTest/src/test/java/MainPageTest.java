@@ -6,6 +6,8 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,10 +30,50 @@ public class MainPageTest extends UseCaseBase {
     @Test
     public void mainPageLoadTest() {
         logger.info("Main page load test");
-        Boolean success = mainPage.isLogoVisible();
+        boolean success = mainPage.isLogoVisible();
         BasePage.takeScreenshot("MainPageTest");
         assertTrue(success);
     }
+    @Test
+    public void mainPageIconLoginTest() {
+        boolean  success = mainPage.isPageIconLoginVisible();
+        assertTrue(success);
+    }
+    @Test
+    public void mainPageIconCartTest() {
+        boolean success = mainPage.isPageIconCartVisible();
+        assertTrue(success);
+    }
+    @Test
+    public void mainPageClickIconCartTest() {
+        mainPage.clickIconCart();
+        boolean success = mainPage.isPageCartDisplayed();
+        assertTrue(success);
+    }
+    @Test
+    public void mainPageClickIconLoginTest() {
+        mainPage.clickIconLogin();
+        boolean success = mainPage.isPageLoginDisplayed();
+        assertTrue(success);
+    }
+    @Test
+    public void mainPageIconCurrencyTest() {
+        boolean success = mainPage.isPageIconCurrencyVisible();
+        assertTrue(success);
+    }
+    @Test
+    public void mainPageIconCurrencyCADTest() {
+        mainPage.clickIconCurrency();
+        boolean success = mainPage.isPageIconCurrencyCAD();
+        assertTrue(success);
+    }
+    @Test
+    public void mainPageIconCurrencyEURTest() {
+        mainPage.clickIconCurrency();
+        boolean success = mainPage.isPageIconCurrencyEUR();
+        assertTrue(success);
+    }
+
 
     @Test
     public void openContactUsPage() {

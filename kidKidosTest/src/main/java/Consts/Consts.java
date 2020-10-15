@@ -27,4 +27,5 @@ public class Consts {
     public static final String CREATE_ACCOUNT_PASSWORD_FIELD = "//*[@name='customer[password]']";
     public static final String CREATE_ACCOUNT_ERROR_PASSWORD_FIELD = "//*[text()='Password can't be blank.']";
     public static final String CREATE_ACCOUNT_ERROR_EMAIL_FIELD = "//*[text()='Email can't be blank.']";
+
 }
