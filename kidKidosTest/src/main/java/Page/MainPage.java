@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static Consts.Consts.LOGIN_EMAIL_FIELD;
+
 public class MainPage extends BasePage{
 
     private static final String LOGO_IMG = "//img[@itemprop='logo']";
@@ -29,8 +31,13 @@ public class MainPage extends BasePage{
     private static final String FIRST_NAME_XPATH = "//input[@name='field[3]']";
     private static final String YOUR_MESSAGE_XPATH = "//*[@data-name ='your_message']";
     private static final String EMAIL_XPATH = "//*[@name='email']";
-
-
+    private static final String Main_PAGE_ICON_LOGIN = "//*[@class='icon icon-login']";
+    private static final String Main_PAGE_ICON_CART = "//*[@class='icon icon-cart']";
+    private static final String Main_PAGE_ICON_CURRENCY = "//*[@class='currency-converter-currency-button-text']";
+    private static final String Main_PAGE_ICON_CURRENCY_CAD = "//*[text()='CAD']";
+    private static final String Main_PAGE_ICON_CURRENCY_EUR = "//*[text()='EUR']";
+    private static final String CART_HEADER = "//h1[text()='Your cart']";
+    private static final String LOGIN_HEADER = "//h1[text()='Login']";
 
 
     public void navigateToMainPage(){
@@ -39,9 +46,41 @@ public class MainPage extends BasePage{
 
 
     public boolean isLogoVisible(){
-        Boolean isVisible =  elementExists(LOGO_IMG);
+        boolean isVisible =  elementExists(LOGO_IMG);
         return isVisible;
     }
+    public boolean isPageIconLoginVisible() {
+        return elementExists(Main_PAGE_ICON_LOGIN);
+    }
+
+    public boolean isPageIconCartVisible() {
+        return elementExists(Main_PAGE_ICON_CART);
+    }
+    public boolean isPageIconCurrencyVisible() {
+        return elementExists(Main_PAGE_ICON_CURRENCY);
+    }
+    public void clickIconCurrency() {
+        clickElementByXpath(Main_PAGE_ICON_CURRENCY);
+    }
+    public void clickIconCart() {
+        clickElementByXpath(Main_PAGE_ICON_CART);
+    }
+    public void clickIconLogin() {
+        clickElementByXpath(Main_PAGE_ICON_LOGIN);
+    }
+    public boolean isPageLoginDisplayed() {
+        return elementExists(LOGIN_HEADER);
+    }
+    public boolean isPageCartDisplayed() {
+        return elementExists(CART_HEADER);
+    }
+    public boolean isPageIconCurrencyCAD() {
+        return elementExists(Main_PAGE_ICON_CURRENCY_CAD);
+    }
+    public boolean isPageIconCurrencyEUR() {
+        return elementExists(Main_PAGE_ICON_CURRENCY_EUR);
+    }
+
 
     public ContactUsPage openContactUsTab(){
         clickElementByXpath(CONTACT_US_OPTION);
