@@ -2,7 +2,9 @@ package Consts;
 
 public class Consts {
     public static final String MAIN_URL = "https://kidkiddos.com";
+    public static final String CART_PAGE_URL = "https://kidkiddos.com/cart";
     public static final String CONTACT_US_PAGE_URL = "https://kidkiddos.com/pages/contact-us";
+    public static final String ENGLISH_PAGE_URL = "https://kidkiddos.com/collections/english-only";
     public static final String LOGIN_PAGE_URL = "https://kidkiddos.com/account/login";
     public static final String CREATE_ACCOUNT_PAGE_URL = "https://kidkiddos.com/account/register";
     public static final String FIRST_NAME_XPATH = "//input[@name='field[3]']";
@@ -27,5 +29,23 @@ public class Consts {
     public static final String CREATE_ACCOUNT_PASSWORD_FIELD = "//*[@name='customer[password]']";
     public static final String CREATE_ACCOUNT_ERROR_PASSWORD_FIELD = "//*[text()='Password can't be blank.']";
     public static final String CREATE_ACCOUNT_ERROR_EMAIL_FIELD = "//*[text()='Email can't be blank.']";
-
+    public static final String CONTACT_US_HEADER = "//h1[text()='Contact us']";
+    public static final String ENGLISH_PAGE_HEADER = "//h1[text()='English Only']";
+    public static final String AMANDA_ENGLISH_BOOK = "//img[@class='grid-view-item__image'][@src='//cdn.shopify.com/s/files/1/1788/1145/products/childrens-motivational-bedtime-story-Amandas-Dream-cover_195x195@2x.jpg?v=1586567360']";
+    public static final String WHEELS_FRENCH_BOOK = "//*[@src='//cdn.shopify.com/s/files/1/1788/1145/products/Wheels-The-Friendship-Race-Bilingual-English-French-kids-book-cover_195x195@2x.jpg?v=1490716263']";
+    public static final String WHEELS_SPANISH_BOOK = "//*[@src='//cdn.shopify.com/s/files/1/1788/1145/products/Wheels-The-Friendship-Race-Bilingual-Spanish-kids-story-about-cars-cover_195x195@2x.jpg?v=1490716909']";
+    public static final String MY_MOM_ENGLISH_BOOK = "//*[@alt='Childrens-bedtime-story-English-KidKiddos-Books-Shelley-Admont-My-Mom-is-Awesome-cover']";
+    public static final String I_LOVE_TO_SHARE_ENGLISH_BOOK = "//img[@class='grid-view-item__image'][@src='//cdn.shopify.com/s/files/1/1788/1145/products/I-Love-to-Share-children_s-bedtime-story-English-Language-Shelley-Admont-KidKiddos-cover_195x195@2x.jpg?v=1491516095']";
+    public static final String Boxer_AND_BRANDON_ENGLISH_BOOK = "//img[@class='grid-view-item__image'][@src='//cdn.shopify.com/s/files/1/1788/1145/products/Boxer-and-Brandon-children_s-picture-book-about-dogs-friendship-KidKiddos-cover_195x195@2x.jpg?v=1490869021']";
+    public static final String ADD_TO_CART_BUTTON = "//div[@class='product-form__item product-form__item--submit']";
+    public static final String QUANTITY_FIELD_BOOKS_PAGE = "//input[@type='number']";
+    public static final String QUANTITY_FIELD_CART_PAGE = "//*[@class='cart__qty-input']";
+    public static final String AMANDA_BOOK_IN_CART_PAGE = "//*[@href='/products/amandas-dream-childrens-picture-book-english-only?variant=31413879275578']";
+    public static final String I_LOVE_BOOK_IN_CART_PAGE = "//*[@href='/products/i-love-to-share-childrens-book-english?variant=32754430465']";
+    public static final String BOXER_BOOK_IN_CART_PAGE = "//*[@href='/products/boxer-and-brandon-childrens-book-english-only?variant=32462675009']";
+    public static final String MY_MOM_BOOK_IN_CART_PAGE = "//*[@href='/products/my-mom-is-awesome-childrens-book-english-only?variant=32618889217']";
+    public static final String WHEELS_FRENCH_BOOK_IN_CART_PAGE = "//*[@href='/products/the-wheels-the-friendship-race-english-french-bilingual-childrens-book?variant=32378904897']";
+    public static final String WHEELS_SPANISH_BOOK_IN_CART_PAGE = "//*[@href='/products/the-wheels-the-friendship-race-english-spanish-bilingual-childrens-book?variant=32380732865']";
+    public static final String FRANCAIS_BUTTON = "//a[@href='/collections/french'][@class='site-nav__link site-nav__link--main']";
+    public static final String SPANISH_BUTTON = "//a[@href='/collections/spanish'][@class='site-nav__link site-nav__link--main']";
 }
