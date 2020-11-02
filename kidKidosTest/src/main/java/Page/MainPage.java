@@ -103,6 +103,7 @@ public class MainPage extends BasePage{
         clickElementByXpath(EBOOKS_BY_LANGUAGE_OPTION);
         return new EBooksByLanguage();
     }
+
     public Espanol openEspanolTab() {
         clickElementByXpath(ESPANOL_OPTION);
         return new Espanol();

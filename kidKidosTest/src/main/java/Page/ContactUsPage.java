@@ -16,7 +16,6 @@ public class ContactUsPage extends BasePage {
         webDriver.get(Consts.CONTACT_US_PAGE_URL);
     }
 
-    public static final String CONTACT_US_HEADER = "//h1[text()='Contact us']";
 
     public boolean isPageTitleVisible() {
         return elementExists(CONTACT_US_HEADER);
